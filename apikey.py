@@ -1,5 +1,5 @@
 from dotenv import load_dotenv
-import os
+import streamlit as st 
 class GetKey:
     """
     ## GetKey
@@ -7,6 +7,6 @@ class GetKey:
     """
     def __init__(self):
         load_dotenv()
-        self.api_key = os.getenv('API_KEY')
-        self.pinecone_api_key = os.getenv('PINECONE_API_KEY')
-        self.pinecone_env = os.getenv('PINECONE_ENV')
+        self.api_key = st.secrets['API_KEY']
+        self.pinecone_api_key = st.secrets['PINECONE_API_KEY']
+        self.pinecone_env = st.secrets['PINECONE_ENV']
