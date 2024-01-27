@@ -4,8 +4,6 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.vectorstores import Chroma,Pinecone 
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
 import google.generativeai as genai
-import os 
-import chromadb
 from pinecone import Pinecone as Cone
 from apikey import GetKey
 embed_model  = GoogleGenerativeAIEmbeddings(model="models/embedding-001",google_api_key=GetKey().api_key)
